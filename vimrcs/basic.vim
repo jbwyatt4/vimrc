@@ -174,7 +174,9 @@ set noswapfile
 " => Text, tab and indent related
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Use spaces instead of tabs
-set expandtab
+if $VIM_DEV_MODE != "kernel"
+    set expandtab
+endif
 
 " Be smart when using tabs ;)
 set smarttab
