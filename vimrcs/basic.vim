@@ -182,8 +182,13 @@ endif
 set smarttab
 
 " 1 tab == 4 spaces
+if $VIM_DEV_MODE != "kernel"
 set shiftwidth=4
 set tabstop=4
+else
+set shiftwidth=8
+set tabstop=8
+endif
 
 " Linebreak on 500 characters
 set lbr
